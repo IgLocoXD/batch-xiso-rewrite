@@ -14,8 +14,8 @@ for /F "tokens=*" %%A in (infile.txt) do (
 	echo Rewriting: "%%A"
 	extract-xiso -r "%%A"
 	if /I '%choice%'=='Y' (
-		echo Deleting: "*%%A.old"
-		del "*%%A.old"
+		echo Deleting: "*.iso.old"
+		del "*.iso.old"
 	)
 )
 echo:
